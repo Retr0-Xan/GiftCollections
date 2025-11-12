@@ -33,7 +33,8 @@ export default async function handler(req, res) {
         return res.status(500).json({ error: 'SMS service not configured' });
     }
 
-    const message = `Hello ${name}. Thank you for coming. We appreciate your generosity`;
+    const message = `Hello ${name}, We cannot thank you enough for your gift and your presence at our wedding. It meant everything to us! God bless you.\n
+    Mr and Mrs Ofori`;
 
     const smsData = {
         sender: "THE OFORIS",
