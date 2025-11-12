@@ -20,7 +20,7 @@ export default function GiftList({ gifts }: GiftListProps) {
         {gifts.map((gift) => (
           <div
             key={gift.id}
-            className="bg-white border border-slate-200 rounded-lg p-5 hover:shadow-md transition-shadow duration-200 aspect-square flex flex-col"
+            className="bg-white border border-slate-200 rounded-lg p-5 hover:shadow-md transition-shadow duration-200 flex flex-col h-48"
           >
             <div className="flex justify-between items-start mb-3">
               <h3 className="font-medium text-slate-900">{gift.guest_name}</h3>
