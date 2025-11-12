@@ -38,7 +38,7 @@ export default async function handler(req, res) {
     const smsData = {
         sender: "THE OFORIS",
         message: message,
-        recipients: phoneNumber
+        recipients: [phoneNumber]
     };
 
     try {
