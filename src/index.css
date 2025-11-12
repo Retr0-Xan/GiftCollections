@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-slate-900;
+    font-feature-settings: "kern" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium;
+    letter-spacing: -0.02em;
+  }
+
+  input, textarea {
+    @apply transition-colors;
+
+    &:focus {
+      @apply outline-none;
+    }
+  }
+}
