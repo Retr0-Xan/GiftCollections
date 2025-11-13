@@ -30,25 +30,23 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">
-      <div className="fixed inset-0 pointer-events-none">
+      <div className="fixed inset-0 pointer-events-none flex">
         <div
-          className="absolute inset-0 opacity-25 bg-cover bg-center"
+          className="flex-1 opacity-25 bg-cover bg-center"
           style={{
             backgroundImage: 'url(/assets/sit_sit.jpg)',
           }}
         />
         <div
-          className="absolute inset-0 opacity-25 bg-cover bg-center"
+          className="flex-1 opacity-25 bg-cover bg-center"
           style={{
             backgroundImage: 'url(/assets/stand_sit.jpg)',
-            mixBlendMode: 'multiply',
           }}
         />
         <div
-          className="absolute inset-0 opacity-25 bg-cover bg-center"
+          className="flex-1 opacity-25 bg-cover bg-center"
           style={{
             backgroundImage: 'url(/assets/stand_stand.jpg)',
-            mixBlendMode: 'multiply',
           }}
         />
       </div>
