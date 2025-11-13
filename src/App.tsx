@@ -30,13 +30,28 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white relative overflow-hidden">
-      <div
-        className="fixed inset-0 opacity-5 bg-cover bg-center pointer-events-none"
-        style={{
-          backgroundImage:
-            'url(https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&cs=tinysrgb&w=1920)',
-        }}
-      />
+      <div className="fixed inset-0 pointer-events-none">
+        <div
+          className="absolute inset-0 opacity-25 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(/assets/sit_sit.jpg)',
+          }}
+        />
+        <div
+          className="absolute inset-0 opacity-25 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(/assets/stand_sit.jpg)',
+            mixBlendMode: 'multiply',
+          }}
+        />
+        <div
+          className="absolute inset-0 opacity-25 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(/assets/stand_stand.jpg)',
+            mixBlendMode: 'multiply',
+          }}
+        />
+      </div>
 
       <header className="relative z-20 border-b border-slate-200 bg-white">
         <div className="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
