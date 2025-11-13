@@ -6,7 +6,8 @@ interface GiftFormProps {
 }
 
 export default function GiftForm({ onGiftAdded }: GiftFormProps) {
-  const [guestName, setGuestName] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [giftDescription, setGiftDescription] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -18,8 +19,8 @@ export default function GiftForm({ onGiftAdded }: GiftFormProps) {
     setError('');
     setSuccess(false);
 
-    if (!guestName.trim() || !giftDescription.trim()) {
-      setError('Please fill in all fields');
+    if (!firstName.trim() || !lastName.trim() || !giftDescription.trim()) {
+      setError('Please fill in all required fields');
       return;
     }
 
@@ -29,7 +30,8 @@ export default function GiftForm({ onGiftAdded }: GiftFormProps) {
       .from('wedding_gifts')
       .insert([
         {
-          guest_name: guestName.trim(),
+          first_name: firstName.trim(),
+          last_name: lastName.trim(),
           phone_number: phoneNumber.trim() || null,
           gift_description: giftDescription.trim(),
         },
@@ -50,7 +52,7 @@ export default function GiftForm({ onGiftAdded }: GiftFormProps) {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            name: guestName.trim(),
+            name: firstName.trim(),
             phoneNumber: phoneNumber.trim(),
           }),
         });
@@ -64,7 +66,8 @@ export default function GiftForm({ onGiftAdded }: GiftFormProps) {
       }
     }
 
-    setGuestName('');
+    setFirstName('');
+    setLastName('');
     setPhoneNumber('');
     setGiftDescription('');
     setIsSubmitting(false);
@@ -92,16 +95,33 @@ export default function GiftForm({ onGiftAdded }: GiftFormProps) {
 
         <div className="space-y-4">
           <div>
-            <label htmlFor="guestName" className="block text-sm font-medium text-slate-900 mb-1.5">
-              Guest Name
+            <label htmlFor="firstName" className="block text-sm font-medium text-slate-900 mb-1.5">
+              First Name
             </label>
             <input
               type="text"
-              id="guestName"
-              value={guestName}
-              onChange={(e) => setGuestName(e.target.value)}
+              id="firstName"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
               className="w-full px-3 py-2 border border-slate-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-colors"
-              placeholder="Name"
+              placeholder="First Name"
+              required
+              disabled={isSubmitting}
+            />
+          </div>
+
+          <div>
+            <label htmlFor="lastName" className="block text-sm font-medium text-slate-900 mb-1.5">
+              Last Name
+            </label>
+            <input
+              type="text"
+              id="lastName"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              className="w-full px-3 py-2 border border-slate-300 rounded text-sm focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent transition-colors"
+              placeholder="Last Name"
+              required
               disabled={isSubmitting}
             />
           </div>

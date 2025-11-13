@@ -24,7 +24,8 @@
 
 CREATE TABLE IF NOT EXISTS wedding_gifts (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
-  guest_name text NOT NULL,
+  first_name text NOT NULL,
+  last_name text NOT NULL,
   phone_number text,
   gift_description text NOT NULL,
   created_at timestamptz DEFAULT now()

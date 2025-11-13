@@ -23,7 +23,7 @@ export default function GiftList({ gifts }: GiftListProps) {
             className="bg-white border border-slate-200 rounded-lg p-5 hover:shadow-md transition-shadow duration-200 flex flex-col h-48"
           >
             <div className="flex justify-between items-start mb-3">
-              <h3 className="font-medium text-slate-900">{gift.guest_name}</h3>
+              <h3 className="font-medium text-slate-900">{gift.first_name} {gift.last_name}</h3>
               <span className="text-xs text-slate-400">
                 {new Date(gift.created_at).toLocaleDateString('en-US', {
                   month: 'short',
