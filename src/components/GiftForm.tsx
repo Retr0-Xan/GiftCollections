@@ -27,7 +27,7 @@ export default function GiftForm({ onGiftAdded }: GiftFormProps) {
     setIsSubmitting(true);
 
     const { error: insertError } = await supabase
-      .from('wedding_gifts')
+      .from('adwoa_wedding_gifts')
       .insert([
         {
           first_name: firstName.trim(),

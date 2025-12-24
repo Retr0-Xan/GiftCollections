@@ -37,19 +37,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
                 <div
                     className="flex-1 opacity-25 bg-cover bg-center"
                     style={{
-                        backgroundImage: 'url(/assets/sit_sit.jpg)',
-                    }}
-                />
-                <div
-                    className="flex-1 opacity-25 bg-cover bg-center"
-                    style={{
-                        backgroundImage: 'url(/assets/stand_sit.jpg)',
-                    }}
-                />
-                <div
-                    className="flex-1 opacity-25 bg-cover bg-center"
-                    style={{
-                        backgroundImage: 'url(/assets/stand_stand.jpg)',
+                        backgroundImage: 'url(/assets/EA_img.jpeg)',
                     }}
                 />
             </div>
@@ -58,7 +46,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
                 <div className="bg-white rounded-lg border border-slate-200 p-8 shadow-lg">
                     <div className="text-center mb-8">
                         <h1 className="text-3xl font-light text-yellow-600 tracking-tight mb-2">
-                            Kweku & Maame
+                            Emmanuel & Adwoa
                         </h1>
                         <p className="text-slate-500 text-sm">Gift Collection Portal</p>
                     </div>

@@ -14,7 +14,7 @@ function App() {
 
   const fetchGifts = async () => {
     const { data, error } = await supabase
-      .from('wedding_gifts')
+      .from('adwoa_wedding_gifts')
       .select('*')
       .order('created_at', { ascending: false });
 
@@ -55,19 +55,7 @@ function App() {
         <div
           className="flex-1 opacity-25 bg-cover bg-center"
           style={{
-            backgroundImage: 'url(/assets/sit_sit.jpg)',
-          }}
-        />
-        <div
-          className="flex-1 opacity-25 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/assets/stand_sit.jpg)',
-          }}
-        />
-        <div
-          className="flex-1 opacity-25 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/assets/stand_stand.jpg)',
+            backgroundImage: 'url(/assets/EA_img.jpeg)',
           }}
         />
       </div>
@@ -75,7 +63,7 @@ function App() {
       <header className="relative z-20 border-b border-slate-200 bg-white">
         <div className="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
           <div>
-            <h1 className="text-3xl font-light text-yellow-600 tracking-tight">Celebrating Kweku & Maame</h1>
+            <h1 className="text-3xl font-light text-yellow-600 tracking-tight">Celebrating Emmanuel & Adwoa</h1>
             <p className="text-slate-500 mt-2 text-sm font-light">Thank you for coming</p>
           </div>
           <div className="flex gap-3">
