@@ -13,9 +13,9 @@ base_url = "https://sms.arkesel.com/api/v2/sms/send"
 
 
 
-recipients = ["233206612800"]
+recipients = ["233206612800","233560922754"]
 MESSAGE = {
-    "sender": "Test",
+    "sender": "THE QUARTEYS (Q7)",
     "message": "This is a test",
     "recipients": recipients
 }

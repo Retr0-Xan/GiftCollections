@@ -37,7 +37,7 @@ export default async function handler(req, res) {
     With Love, Mr & Mrs Quartey`;
 
     const smsData = {
-        sender: "THE QUARTEYS (Q7)",
+        sender: "Test",
         message: message,
         recipients: [phoneNumber]
     };
