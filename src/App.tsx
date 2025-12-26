@@ -60,11 +60,25 @@ function App() {
         />
       </div>
 
+      {/* Logo at bottom right */}
+      <img
+        src="/assets/EA Design.jpeg"
+        alt="Emmanuel & Adwoa Logo"
+        className="fixed bottom-8 right-8 h-24 w-24 object-cover rounded-full shadow-lg z-20"
+      />
+
       <header className="relative z-20 border-b border-slate-200 bg-white">
         <div className="max-w-7xl mx-auto px-6 py-8 flex justify-between items-center">
-          <div>
-            <h1 className="text-3xl font-light text-yellow-600 tracking-tight">Celebrating Emmanuel & Adwoa</h1>
-            <p className="text-slate-500 mt-2 text-sm font-light">Thank you for coming</p>
+          <div className="flex items-center gap-4">
+            <img
+              src="/assets/EA Design.jpeg"
+              alt="Emmanuel & Adwoa"
+              className="h-16 w-16 object-cover rounded-full"
+            />
+            <div>
+              <h1 className="text-3xl font-light text-yellow-600 tracking-tight">Celebrating Emmanuel & Adwoa</h1>
+              <p className="text-slate-500 mt-2 text-sm font-light">Thank you for coming</p>
+            </div>
           </div>
           <div className="flex gap-3">
             <button

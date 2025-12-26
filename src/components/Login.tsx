@@ -42,6 +42,13 @@ export default function Login({ onLoginSuccess }: LoginProps) {
                 />
             </div>
 
+            {/* Logo at bottom right */}
+            <img
+                src="/assets/EA Design.jpeg"
+                alt="Emmanuel & Adwoa Logo"
+                className="fixed bottom-8 right-8 h-24 w-24 object-cover rounded-full shadow-lg z-20"
+            />
+
             <div className="relative z-10 w-full max-w-md px-6">
                 <div className="bg-white rounded-lg border border-slate-200 p-8 shadow-lg">
                     <div className="text-center mb-8">
